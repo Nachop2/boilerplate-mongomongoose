@@ -1,7 +1,7 @@
 require('dotenv').config();
 let mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://FreeCodeCamp:tgqRhTpMz9jRXa1N@majadabae.9ejjn7q.mongodb.net/FreeCodeCamp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let personSchema = new mongoose.Schema({
   name: {
