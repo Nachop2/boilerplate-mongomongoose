@@ -15,14 +15,6 @@ let personSchema = new mongoose.Schema({
 
 let Person = mongoose.model('Person', personSchema);
 
-Person
-  .save()
-  .then((doc) => {
-    console.log(doc);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
