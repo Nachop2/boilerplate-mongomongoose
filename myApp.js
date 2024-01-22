@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('mongoose');
+let mongoose = require('mongoose');
 
 mongoose.connect("mongodb+srv://FreeCodeCamp:tgqRhTpMz9jRXa1N@majadabae.9ejjn7q.mongodb.net/FreeCodeCamp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
