@@ -48,7 +48,7 @@ const createManyPeople = (arrayOfPeople, done) => {
   })
 };
 
-let personName = "test"
+let personName = "a2"
 
 const findPeopleByName = (personName, done) => {
   
