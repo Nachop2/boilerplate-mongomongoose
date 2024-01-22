@@ -3,7 +3,17 @@ let mongoose = require('mongoose');
 
 mongoose.connect("mongodb+srv://FreeCodeCamp:tgqRhTpMz9jRXa1N@majadabae.9ejjn7q.mongodb.net/FreeCodeCamp?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
-let Person;
+let personSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  age: Number,
+  favoriteFoods: [String]
+});
+
+
+let Person = mongoose.model('Person', personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
