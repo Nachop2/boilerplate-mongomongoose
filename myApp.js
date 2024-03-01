@@ -52,7 +52,7 @@ let personName = "a2"
 
 const findPeopleByName = (personName, done) => {
   
-  Person.findById(personName, function (err, people) {
+  Person.findById({name:personName}, function (err, people) {
     if (err) return console.error(err);
     done(null, people);
   })
